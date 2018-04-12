@@ -12,7 +12,7 @@ const {
   getUser,
   logout,
   updateProfile
-} = require(`${__dirname}/controllers/usersCtrl`);
+} = require(`${__dirname}/Controllers/usersCtrl`);
 
 massive(process.env.CONNECTION_STRING)
   .then(db => {
