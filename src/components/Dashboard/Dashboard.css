@@ -1,0 +1,18 @@
+.dboardDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.dboardUl {
+  float: right;
+  display: flex;
+  list-style: none;
+}
+
+.dboardLi {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}

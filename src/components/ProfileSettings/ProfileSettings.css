@@ -1,0 +1,14 @@
+.formClass {
+  width: 40vw;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttonDiv{
+  width:100vw;
+}
+
+.buttonDiv button{
+  margin-left: 49vw;
+}

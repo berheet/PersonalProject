@@ -1,0 +1,41 @@
+h1 {
+  text-align: center;
+}
+
+.genderOption {
+  text-align: center;
+}
+
+.signUpTwoDiv {
+  text-align: center;
+}
+
+.activityParentdiv {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.activityLevels {
+  text-align: left;
+  margin-left: 4%;
+}
+
+.goalDiv {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.selectGoal {
+  text-align: left;
+  margin-left: 4%;
+}

@@ -1,0 +1,43 @@
+/* @import url(https://fonts.googleapis.com/css?family=Advent+Pro:100);
+html { 
+  background:  url(http://25.media.tumblr.com/cc48751f62ae8d63d891e3898a19fd68/tumblr_murigwVMcX1ryugvbo1_500.gif) no-repeat center center fixed; 
+  background-size: cover;
+  background-position: center;
+}
+h1{
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 3em;
+  margin: .2em .5em;
+  color: rgba(0,0,0, 0.3);
+}
+body {
+    height: 100%;
+} */
+
+/* body{
+    background-color: black
+} */
+
+.breakfastDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  margin-right: 5vw;
+  margin-left: 5vw;
+}
+
+.breakfastMeal {
+  width: 13vw;
+  height: 35vh;
+  text-align: center;
+  background-color: white;
+  margin-bottom: 1vh;
+}
+
+.black img {
+  height: 22vh;
+  width: 8vw;
+}

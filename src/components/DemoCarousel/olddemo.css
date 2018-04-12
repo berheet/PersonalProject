@@ -1,0 +1,48 @@
+/* .mainDiv {
+    overflow-x: hidden;
+    width: 100vw;
+    margin-top: 0vh;
+    position: relative; 
+    z-index: 2; 
+  }
+  
+  .movingDiv {
+    height: 50vh;
+    width: 80vw;
+    animation-name: slider;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    animation-delay: 3s;
+    position: absolute;
+    left: 0vw;
+    display: flex;
+    flex-direction: row;
+    object-fit: cover;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  }
+  .carouselImages {
+    width: 80vw;
+  }
+  
+  @keyframes slider {
+    0% {
+      left: 0vw;
+    }
+    30% {
+      left: -100vw;
+    }
+    50% {
+      left: -100vw;
+    }
+    80% {
+      left: -200vw;
+    }
+    100% {
+      left: -200vw;
+    }
+  }
+   */

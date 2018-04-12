@@ -1,0 +1,24 @@
+.headerTwo {
+  top: 63vh;
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  align-content: center;
+  justify-content: center;
+}
+
+.loginDiv {
+  position: absolute;
+  top: 15vh;
+}
+
+.loginbutton {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.Time {
+  text-align: center;
+  color: #004e73
+}

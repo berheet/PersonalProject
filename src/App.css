@@ -1,0 +1,91 @@
+.container {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+/* .gain_weight_styler {
+  width: 20vw;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+} */
+.goalLevel {
+  width: 15vw;
+}
+
+.card-body {
+  height: 50vh;
+}
+
+.parentDiv {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.maintain_weight_level {
+  width: 75vw;
+  margin-top: 8vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.maintainPieChart {
+  height: 10%;
+  width: 10%;
+}
+
+.cardsDiv {
+  display: inline-flex;
+  margin-right: 2vw;
+  text-align: center;
+  width: 15vw;
+}
+
+.cardManager {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+}
+
+.articlesDiv {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.articleImage {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+  align-content: stretch;
+}
+
+.contactusDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+.contactForm {
+  padding-right: 5vw;
+  width: 35vw;
+}
+
+.contactForm1 {
+  padding-left: 5vw;
+}

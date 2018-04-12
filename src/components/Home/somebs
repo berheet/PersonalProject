@@ -1,0 +1,12 @@
+<div className="loginDiv">
+          <a href={process.env.REACT_APP_LOGIN}>
+            <button
+              className="loginbutton"
+              onClick={() => {
+                this.handleLogin();
+              }}
+            >
+              LOGIN
+            </button>
+          </a>
+        </div>

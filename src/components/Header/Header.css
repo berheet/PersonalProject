@@ -1,0 +1,41 @@
+.headerDiv {
+  background-color: #004e73;
+  margin: 0 auto;
+  margin-bottom: 1vw;
+  box-sizing: border-box;
+  display: flex;
+  height: 6vh;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+.headerBtns {
+  margin-top: 1vh;
+}
+
+/* .Nav {
+  float: right;
+  display: flex;
+  list-style: none;
+}
+
+.navDiv {
+  margin-left: 1vw;
+  margin-right: 2vw;
+  color: white;
+}
+
+.headerA {
+  color: white;
+}
+
+
+
+.header_div {
+  display: flex;
+}
+ 
+h1 {
+  margin: 0 auto;
+  margin-top: 20px;
+} */
