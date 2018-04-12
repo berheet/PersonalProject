@@ -52,7 +52,7 @@ passport.use(
       clientID: process.env.CLIENT_ID,
       scope: "openid profile",
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: "http://localhost:3001/auth"
+      callbackURL: "/auth"
     },
     function(accessToken, refreshToken, extraParams, profile, done) {
       app
@@ -84,7 +84,7 @@ passport.deserializeUser((user, done) => {
 app.get(
   "/auth",
   passport.authenticate("auth0", {
-    successRedirect: "http://localhost:3000/profile", //change this later
+    successRedirect: "/profile", //change this later
     failureRedirect: "/auth"
   })
 );
