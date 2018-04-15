@@ -5,11 +5,11 @@
   width: 100vw;
   align-content: center;
   justify-content: center;
+  margin-left: 35vw;
 }
 
 .loginDiv {
   position: absolute;
-  top: 15vh;
 }
 
 .loginbutton {
@@ -20,5 +20,5 @@
 
 .Time {
   text-align: center;
-  color: #004e73
+  color: #004e73;
 }

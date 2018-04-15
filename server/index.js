@@ -11,7 +11,9 @@ require("dotenv").config();
 const {
   getUser,
   logout,
-  updateProfile
+  updateProfile,
+  addTestimonial,
+  getTestimonial
 } = require(`${__dirname}/Controllers/usersCtrl`);
 
 massive(process.env.CONNECTION_STRING)
@@ -29,7 +31,7 @@ app.use(express.static(`${__dirname}/../build`));
 app.use(cors());
 app.use(json());
 
-console.log(process.env.CONNECTION_STRING);
+// console.log(process.env.CONNECTION_STRING);
 
 app.use(
   session({
@@ -81,13 +83,19 @@ passport.deserializeUser((user, done) => {
   done(null, user);
 });
 
-app.get(
-  "/auth",
-  passport.authenticate("auth0", {
-    successRedirect: "/profile", //change this later
-    failureRedirect: "/auth"
-  })
-);
+// app.get(
+//   "/auth",
+//   passport.authenticate("auth0", {
+//     successRedirect: "http://localhost:3000/profile", //change this later
+//     failureRedirect: "http://localhost:3000/auth"
+//   })
+// );
+
+app.get("/auth", passport.authenticate("auth0"), function(req, res, next) {
+  req.user.height === null
+    ? res.redirect("http://localhost:3000/dashboard/profileSettings")
+    : res.redirect("http://localhost:3000/profile");
+});
 
 // app.get('/api/me', (req, res, next) => {
 // 	if (!req.user) {
@@ -118,6 +126,8 @@ app.get(
 app.get("/logout", logout);
 app.get("/api/me", getUser);
 app.put("/updatingProfile", updateProfile);
+app.post("/addingTestimonial", addTestimonial);
+app.get("/api/testimonial", getTestimonial)
 
 const path = require("path");
 app.get("*", (req, res, next) => {

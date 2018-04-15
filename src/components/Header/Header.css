@@ -1,16 +1,29 @@
-.headerDiv {
-  background-color: #004e73;
+.headerBtns {
   margin: 0 auto;
   margin-bottom: 1vw;
   box-sizing: border-box;
+  background: transparent;
+  /* margin-right: 10vw; */
+}
+.buttonsDiv {
   display: flex;
-  height: 6vh;
-  align-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   justify-content: flex-end;
+  align-items: flex-start;
+  align-content: stretch;
+  margin-top: 3vh;
 }
 
-.headerBtns {
-  margin-top: 1vh;
+.headerDiv {
+  display: flex;
+}
+.logoDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
 }
 
 /* .Nav {

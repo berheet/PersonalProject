@@ -1,8 +1,10 @@
 const getUser = (req, res, next) => {
   if (!req.user) {
     res.status(401).json({ message: "Not Logged In!" });
-  } else {
+  } else if (!req.session.user) {
     req.session.user = req.user;
+    res.status(200).json(req.session.user);
+  } else {
     res.status(200).json(req.session.user);
   }
 };
@@ -39,11 +41,32 @@ const updateProfile = (req, res) => {
       goal,
       id
     )
-    .then(response => res.status(200).json({ response }));
+    .then(response => {
+      req.session.user = response[0];
+      res.status(200).json(response[0]);
+    });
 };
+
+const addTestimonial = (req, res) => {
+  const dbInstance = req.app.get("db");
+  console.log(req);
+  const { name, rating, message } = req.body;
+  dbInstance
+    .addTestimonial([name, rating, message])
+    .then(response => {
+      res.status(200).json(response);
+    })
+    .catch(err => console.log(err));
+};
+
+const getTestimonial = (req, res) => {
+  
+}
 
 module.exports = {
   getUser,
   logout,
-  updateProfile
+  updateProfile,
+  addTestimonial,
+  getTestimonial
 };

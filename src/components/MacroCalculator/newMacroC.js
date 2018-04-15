@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Dashboard from "../Dashboard/Dashboard";
 import { getUser } from "../../ducks/userReducer";
 import { connect } from "react-redux";
+import { Link, Switch } from "react-router-dom";
 
 class newMacroC extends Component {
   constructor(props) {
@@ -25,12 +26,11 @@ class newMacroC extends Component {
     let gainThreePounds = gainTwoPounds + 500;
 
     return (
-      <div>
-        <Dashboard />
+      <div className="desiredGoal">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">
+          <Link class="navbar-brand" to="#">
             Desired Goal
-          </a>
+          </Link>
           <button
             class="navbar-toggler"
             type="button"
@@ -44,13 +44,12 @@ class newMacroC extends Component {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                           <a
+              <Link
                 class="nav-item nav-link"
-                href="/dashboard/MacroCalulator/gainweight"
+                to="/dashboard/MacroCalulator/gainweight"
               >
                 Gain Weight
-              </a>
-             
+              </Link>
             </div>
           </div>
         </nav>
@@ -109,9 +108,8 @@ class newMacroC extends Component {
             <strong>{gainThreePounds}</strong>
           </p>
         </div> */}
-        <br /> 
+        <br />
         <p>Please select your desired goal</p>
-        
       </div>
     );
   }

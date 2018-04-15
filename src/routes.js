@@ -35,6 +35,8 @@ import Lunch from "./components/Nutrition/subHeaders/RecipiesFood/Lunch";
 import Dinner from "./components/Nutrition/subHeaders/RecipiesFood/Dinner";
 import Snacks from "./components/Nutrition/subHeaders/RecipiesFood/Snacks";
 import Shop from "./components/Shop/Shop";
+import Testimonials from "./components/Testimonials/Testimonials";
+import TestimonialSubmission from './components/Testimonials/TestimonialSubmission'
 
 export default (
   <Switch>
@@ -75,5 +77,7 @@ export default (
     <Route path="/DinnerRecipies" component={Dinner} />
     <Route path="/SnacksRecipies" component={Snacks} />
     <Route path="/Shop" component={Shop} />
+    <Route path="/Testimonials" component={Testimonials} />
+    <Route path="/TestimonialSubmission" component={TestimonialSubmission} />
   </Switch>
 );

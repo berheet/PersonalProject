@@ -5,6 +5,7 @@ import { ENOPROTOOPT } from "constants";
 import axios from "axios";
 import { connect } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
+import { getUser } from "../../ducks/userReducer";
 
 class ProfileSettings extends Component {
   constructor(props) {
@@ -19,6 +20,10 @@ class ProfileSettings extends Component {
       activityLevel: "",
       goal: ""
     };
+  }
+
+  componentDidMount() {
+    this.props.getUser();
   }
 
   handleChange = e => {
@@ -40,14 +45,13 @@ class ProfileSettings extends Component {
         goal: this.state.goal,
         id: this.props.user.id
       })
-      .then(response => alert("Wow, so easy!"));
+      .then(response => this.props.getUser() && alert("That was easy!"));
   };
 
   render() {
     console.log(this.props);
     return (
       <div>
-        <Dashboard />
         <form className="formClass" onSubmit={() => this.handleSubmit()}>
           <div class="nameDiv">
             <label for="exampleFormControlInput1">Name</label>
@@ -173,7 +177,7 @@ class ProfileSettings extends Component {
         </form>
         <br />
         <div className="buttonDiv">
-        <button onClick={() => this.onSubmit()}>Submit</button>
+          <button onClick={() => this.onSubmit()}>Submit</button>
         </div>
       </div>
     );
@@ -181,4 +185,4 @@ class ProfileSettings extends Component {
 }
 
 const mapStateToProps = state => state.userReducer;
-export default connect(mapStateToProps, {})(ProfileSettings);
+export default connect(mapStateToProps, { getUser })(ProfileSettings);

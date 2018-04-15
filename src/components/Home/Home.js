@@ -8,6 +8,7 @@ import Carousel from "../DemoCarousel/DemoCarousel";
 import newHeader from "../Header/newHeader";
 import { connect } from "react-redux";
 import { getUser } from "../../ducks/userReducer";
+import Dashboard from "../Dashboard/Dashboard";
 
 class Home extends Component {
   constructor() {
@@ -23,26 +24,25 @@ class Home extends Component {
   render() {
     console.log(this.props);
     return (
-      <div>
-        <div className="carDiv">
-          <Carousel /> <br />
-          <br />
-        </div>
+      <div className="headerTwoDiv">
+        <Carousel /> <br />
+        <br />
         <div
           className="headerTwo"
           style={{
+            width: "30vw",
+            height: "30vh",
+            backgroundColor: "white",
             alignContent: "center",
-            color: "#004e73"
+            color: "#004e73",
+            opacity: "0.6",
+            borderRadius: "25px",
+            textAlign: "center"
           }}
         >
-          <h3>
-            The day you start achieving your goals:{" "}
-            <p className="Time">
-              <Time />
-            </p>
-          </h3>{" "}
           {!this.props.user.age ? (
-            <div className="loginDiv">
+            <div className="loginDiv" style={{ marginTop: "5vh" }}>
+              <h3 style={{ marginBottom: "7vh" }}>Begin your journey today!</h3>{" "}
               <a href={process.env.REACT_APP_LOGIN}>
                 <button
                   className="loginbutton"
@@ -55,10 +55,13 @@ class Home extends Component {
               </a>
             </div>
           ) : (
-            <div className="loginDiv>">
-              <a href={process.env.REACT_APP_LOGOUT}>
-                <button>LOGOUT</button>
-              </a>
+            <div className="welcomeDiv">
+              <h5>
+                {" "}
+                Congratulations on beginning your journey to a healthier and
+                more confident you! Please dont hesitate to contact us for any
+                questions
+              </h5>
             </div>
           )}
         </div>

@@ -29,6 +29,11 @@ class App extends Component {
         <div className="App">
           <NewHeader />
         </div>
+        {!this.props.user.age ? null : (
+          <div classNane="theDashBoard">
+            <Dashboard />
+          </div>
+        )}
         <div className="belowDBoard" style={{ overflowX: "hidden" }}>
           {routes}
         </div>

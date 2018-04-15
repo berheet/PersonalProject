@@ -17,16 +17,14 @@ class Dashboard extends Component {
       <div className="dboardDiv">
         <ul className="dboardUl">
           <li className="dboardLi">
-            <a href="/profile">Profile</a>
+            <Link to="/profile">Profile</Link>
           </li>
           <li className="MacroCalculator">
-            <a href="/dashboard/MacroCalculator">Macro Tracker</a>
+            <Link to="/dashboard/MacroCalculator">Macro Tracker</Link>
           </li>
+
           <li className="dboardLi">
-            <a href="/dashboard/FoodLog">Food Log</a>
-          </li>
-          <li className="dboardLi">
-            <a href="/dashboard/profileSettings">Profile Settings</a>
+            <Link to="/dashboard/profileSettings">Profile Settings</Link>
           </li>
           <li className="dboardLi">Welcome, {this.props.user.name}</li>
           {this.props.user ? (

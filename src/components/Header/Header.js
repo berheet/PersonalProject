@@ -9,7 +9,7 @@ const newHeader = () => {
       <div className="headerstuff">
         {" "}
         <Link className="btn-xs" to="/">
-          <button style={{ backgroundColor: "#999999" }}>Home</button>
+          <button>Home</button>
         </Link>
       </div>
       <div className="dropdown">
@@ -49,8 +49,7 @@ const newHeader = () => {
         >
           Exercises
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2"
-        >
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
           <Link class="dropdown-item" to="/UpperBody">
             Upper Body
           </Link>

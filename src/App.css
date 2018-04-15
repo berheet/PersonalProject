@@ -17,6 +17,11 @@
   height: 50vh;
 }
 
+.dboardDiv {
+  margin-top: -12vh;
+  margin-bottom: 3vw;
+}
+
 .parentDiv {
   width: 100vw;
   display: flex;
@@ -36,6 +41,12 @@
 .maintainPieChart {
   height: 10%;
   width: 10%;
+}
+
+.desiredGoal {
+  position: absolute;
+  top: 25vh;
+  width: 100vw;
 }
 
 .cardsDiv {
@@ -86,6 +97,9 @@
   width: 35vw;
 }
 
+.progress {
+  display: flex;
+}
 .contactForm1 {
   padding-left: 5vw;
 }

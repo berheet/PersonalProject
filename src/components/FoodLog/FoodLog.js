@@ -12,7 +12,6 @@ export default class FoodLog extends Component {
   render() {
     return (
       <div>
-        <Dashboard />
         <h1>Food Log </h1>
       </div>
     );

@@ -43,6 +43,7 @@ class GainWeight extends Component {
     ) {
       activityincluded = 1.9;
     }
+    let dog = "Maintain Current Weight";
 
     //Male
     let weightsection = 6.23 * this.props.user.currentweight;
@@ -92,7 +93,6 @@ class GainWeight extends Component {
     console.log(first);
     return (
       <div>
-        <Dashboard />
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#">
             Desired Goal
@@ -121,8 +121,8 @@ class GainWeight extends Component {
         </nav>
         <h4 style={{ textAlign: "center" }}>Gain Weight: </h4> <br />
         <div className="parentDiv">
-          <div className="goalLevel">
-            <h5>Lose 2 Pounds per Week:</h5>
+          <div className="goalLevel" style={{ marginRight: "3vw" }}>
+            <h5>Percentage Here:</h5>
             <div class="progress">
               <div
                 class="progress-bar"
@@ -150,13 +150,14 @@ class GainWeight extends Component {
                 <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
                     <button
+                      style={{ marginLeft: "-2vw" }}
                       class="btn btn-link"
                       data-toggle="collapse"
                       data-target="#collapseOne"
                       aria-expanded="false"
                       aria-controls="collapseOne"
                     >
-                      Collapsible Group Item #1
+                      Lose 2 Pounds per Week
                     </button>
                   </h5>
                 </div>
@@ -171,7 +172,14 @@ class GainWeight extends Component {
               </div>{" "}
             </div>
           </div>
-          <div className="goalLevel" style={{ marginLeft: "5vw" }}>
+          <div
+            className="goalLevel"
+            style={
+              this.props.user.goal === "Lose Weight: 1 pound per week"
+                ? { backgroundColor: "red" }
+                : null
+            }
+          >
             <h5>Lose 1 Pound per Week:</h5>
             <div class="progress">
               <div
@@ -197,9 +205,18 @@ class GainWeight extends Component {
 
             <div id="accordion">
               <div class="card">
-                <div class="card-header" id="headingTwo">
+                <div
+                  class="card-header"
+                  id="headingTwo"
+                  style={
+                    this.props.user.goal === "Lose Weight: 1 pound per week"
+                      ? { backgroundColor: "red" }
+                      : null
+                  }
+                >
                   <h5 class="mb-0">
                     <button
+                      style={{ marginLeft: "-2vw" }}
                       class="btn btn-link"
                       data-toggle="collapse"
                       data-target="#collapseTwo"
@@ -215,6 +232,11 @@ class GainWeight extends Component {
                   class="collapse"
                   aria-labelledby="headingTwo"
                   data-parent="#accordion"
+                  style={
+                    this.props.user.goal === "Lose Weight: 1 pound per week"
+                      ? { backgroundColor: "red" }
+                      : null
+                  }
                 >
                   <div class="card-body">Cool stuff here</div>
                 </div>
@@ -249,7 +271,7 @@ class GainWeight extends Component {
               <div class="card">
                 <div class="card-header" id="headingThree">
                   <h5 class="mb-0">
-                    <button class="btn btn-link">
+                    <button style={{ marginLeft: "-2vw" }} class="btn btn-link">
                       Collapsible Group Item #1
                     </button>
                   </h5>
@@ -261,7 +283,7 @@ class GainWeight extends Component {
           </div>
 
           <div className="goalLevel" style={{ marginLeft: "5vw" }}>
-            <h5>Gain 1 Pound per Week:</h5>
+            <h5>Percentage Here:</h5>
             <div class="progress">
               <div
                 class="progress-bar"
@@ -293,13 +315,14 @@ class GainWeight extends Component {
                 <div class="card-header" id="headingFour">
                   <h5 class="mb-0">
                     <button
+                      style={{ marginLeft: "-2vw" }}
                       class="btn btn-link"
                       data-toggle="collapse"
                       data-target="#collapseFour"
                       aria-expanded="false"
                       aria-controls="collapseFour"
                     >
-                      Collapsible Group Item #1
+                      Gain 1 Pound per Week
                     </button>
                   </h5>
                 </div>
@@ -316,7 +339,7 @@ class GainWeight extends Component {
           </div>
 
           <div className="goalLevel" style={{ marginLeft: "5vw" }}>
-            <h5>Gain 2 Pounds per Week:</h5>
+            <h5>Percentage Here:</h5>
             <div class="progress">
               <div
                 class="progress-bar"
@@ -348,13 +371,14 @@ class GainWeight extends Component {
                 <div class="card-header" id="headingfive">
                   <h5 class="mb-0">
                     <button
+                      style={{ marginLeft: "-2vw" }}
                       class="btn btn-link"
                       data-toggle="collapse"
                       data-target="#collapseFive"
                       aria-expanded="false"
                       aria-controls="collapseFive"
                     >
-                      Collapsible Group Item #1
+                      Gain 2 Pounds per Week
                     </button>
                   </h5>
                 </div>

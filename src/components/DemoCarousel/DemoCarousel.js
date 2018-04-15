@@ -8,6 +8,7 @@ import img5 from "./Images/workingOut.jpg";
 
 export default class CarouselComponent extends Component {
   render() {
+    console.log(window);
     return (
       <div className="Homecaro">
         <div
@@ -21,70 +22,34 @@ export default class CarouselComponent extends Component {
               <div>
                 <img
                   class="d-block"
-                  src="https://cdn-mf0.heartyhosting.com/sites/mensfitness.com/files/styles/gallery_slideshow_image/public/1280-mountain-climber.jpg?itok=YNclzUN6"
+                  src="https://wallscover.com/images/fitness-wallpaper-3.jpg"
                   alt="First slide"
+                  style={{ width: "100vw", height: "100vh" }}
                 />
-                <div class="carousel-caption">
-                  <br />
-                  <br />
-                  <h3>Hello</h3>
-                  <p>WhatsUp</p>
-                </div>
+                <div class="carousel-caption " style={{ color: "red" }} />
               </div>
             </div>
             <div class="carousel-item">
               <div>
                 <img
                   class="d-block w-100"
-                  src="https://cdn-mf0.heartyhosting.com/sites/mensfitness.com/files/styles/gallery_slideshow_image/public/1280-mountain-climber.jpg?itok=YNclzUN6"
+                  src="
+                  http://www.gafollowers.com/wp-content/uploads/2016/02/Healthy-eating.jpg"
                   alt="Second slide"
+                  style={{ width: "100vw", height: "100vh" }}
                 />
-                <div class="carousel-caption">
-                  <br />
-                  <br />
-                  <h3>Hello</h3>
-                  <p>WhatsUp</p>
-                </div>
+                <div class="carousel-caption" style={{ color: "red" }} />
               </div>
             </div>
             <div class="carousel-item">
               <div>
                 <img
                   class="d-block w-100"
-                  src="https://cdn-mf0.heartyhosting.com/sites/mensfitness.com/files/styles/gallery_slideshow_image/public/1280-mountain-climber.jpg?itok=YNclzUN6"
+                  src="https://www.healthline.com/hlcmsresource/images/AN_images/man-drinking-pre-workout-supplement-1296x728.jpg"
                   alt="Third slide"
+                  style={{ width: "100vw", height: "100vh" }}
                 />
-                <div class="carousel-caption d-none d-md-block">
-                  <br />
-                  <br />
-                  <h3>Hello</h3>
-                  <p>WhatsUp</p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div>
-                <img
-                  class="d-block w-100"
-                  src="https://cdn-mf0.heartyhosting.com/sites/mensfitness.com/files/styles/gallery_slideshow_image/public/reversecrunch-1280.jpg?itok=3_O1vCI4"
-                  alt="Fourth slide"
-                />
-                <div class="carousel-caption d-none d-md-block">
-                  <br />
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <div>
-                <img
-                  class="d-block w-100"
-                  src="https://cdn-mf0.heartyhosting.com/sites/mensfitness.com/files/styles/gallery_slideshow_image/public/abs-exercises-main-1280.jpg?itok=ceXX_FHy"
-                  alt="Eighth slide"
-                />
-                <div class="carousel-caption d-none d-md-block">
-                  <br />
-                </div>
+                <div class="carousel-caption " style={{ color: "red" }} />
               </div>
             </div>
           </div>
