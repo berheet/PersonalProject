@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import ProfileSettings from "./components/ProfileSettings/ProfileSettings";
 import Profile from "./components/Profile/Profile";
-import FoodLog from "./components/FoodLog/FoodLog";
 import Exercises from "./components/Exercises/Exercises";
 import App from "./App";
 import Home from "./components/Home/Home";
@@ -36,12 +35,11 @@ import Dinner from "./components/Nutrition/subHeaders/RecipiesFood/Dinner";
 import Snacks from "./components/Nutrition/subHeaders/RecipiesFood/Snacks";
 import Shop from "./components/Shop/Shop";
 import Testimonials from "./components/Testimonials/Testimonials";
-import TestimonialSubmission from './components/Testimonials/TestimonialSubmission'
+import TestimonialSubmission from "./components/Testimonials/TestimonialSubmission";
 
 export default (
   <Switch>
     <Route exact path="/" component={Home} />
-    <Route path="/dashboard/FoodLog" component={FoodLog} />
     <Route path="/dashboard/profileSettings" component={ProfileSettings} />
     <Route path="/profile" component={Profile} />
     <Route path="/login" component={Login} />

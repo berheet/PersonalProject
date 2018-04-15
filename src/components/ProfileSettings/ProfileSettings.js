@@ -34,7 +34,7 @@ class ProfileSettings extends Component {
 
   onSubmit = () => {
     axios
-      .put("/updatingProfile", {
+      .post("/updatingProfile", {
         name: this.state.name,
         age: this.state.age,
         gender: this.state.gender,

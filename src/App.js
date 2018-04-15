@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import Header from "./components/Header/Header";
 import axios from "axios";
 import Calendar from "./components/Calendar/Calendar";
 import alertForum from "./components/Calendar/alertForum";
@@ -11,6 +10,7 @@ import NewHeader from "./components/Header/newHeader";
 import { connect } from "react-redux";
 import { getUser } from "./ducks/userReducer";
 import { withRouter } from "react-router";
+import SecondHeader from "./components/Header/secondHeader";
 
 const style = {
   position: "relative",
@@ -26,9 +26,15 @@ class App extends Component {
     console.log(this.props);
     return (
       <div>
-        <div className="App">
-          <NewHeader />
-        </div>
+        {this.props.location.pathname === "/" ? (
+          <div className="App">
+            <NewHeader />
+          </div>
+        ) : (
+          <div className="App">
+            <SecondHeader />
+          </div>
+        )}
         {!this.props.user.age ? null : (
           <div classNane="theDashBoard">
             <Dashboard />

@@ -125,7 +125,7 @@ app.get("/auth", passport.authenticate("auth0"), function(req, res, next) {
 
 app.get("/logout", logout);
 app.get("/api/me", getUser);
-app.put("/updatingProfile", updateProfile);
+app.post("/updatingProfile", updateProfile);
 app.post("/addingTestimonial", addTestimonial);
 app.get("/api/testimonial", getTestimonial)
 

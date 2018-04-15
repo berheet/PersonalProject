@@ -60,8 +60,16 @@ const addTestimonial = (req, res) => {
 };
 
 const getTestimonial = (req, res) => {
-  
-}
+  const dbInstance = req.app.get("db");
+  dbInstance
+    .getTestimonial()
+    .then(response => {
+      res.status(200).json(response);
+    })
+    .catch(err => {
+      err.status(500).json(err);
+    });
+};
 
 module.exports = {
   getUser,

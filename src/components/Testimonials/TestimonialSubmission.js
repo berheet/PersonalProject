@@ -19,13 +19,14 @@ class TestimonialSubmission extends Component {
   };
 
   onSubmit = () => {
+
     axios
       .post("/addingTestimonial", {
         name: this.state.name,
         rating: this.state.rating,
         message: this.state.message
       })
-      .then(response => console.log("Complete!"));
+      .then(response => console.log(response));
   };
 
   render() {
