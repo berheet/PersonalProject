@@ -7,26 +7,28 @@ class TestimonialSubmission extends Component {
     this.state = {
       name: "",
       rating: "",
-      message: ""
+      message: "",
+      image: ""
     };
   }
 
   handleChange = e => {
     this.setState({
       [e.target.name]: e.target.value,
-      [e.target.message]: e.target.value
+      [e.target.message]: e.target.value,
+      [e.target.image]: e.target.value
     });
   };
 
   onSubmit = () => {
-
     axios
       .post("/addingTestimonial", {
         name: this.state.name,
         rating: this.state.rating,
-        message: this.state.message
+        message: this.state.message,
+        image: this.state.image
       })
-      .then(response => console.log(response));
+      .then(response => alert("Thank you!"));
   };
 
   render() {
@@ -49,7 +51,9 @@ class TestimonialSubmission extends Component {
               />
             </div>
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Example select</label>
+              <label for="exampleFormControlSelect1">
+                Rate your experience:
+              </label>
               <select
                 class="form-control"
                 id="exampleFormControlSelect1"
@@ -63,6 +67,18 @@ class TestimonialSubmission extends Component {
                 <option>4</option>
                 <option>5</option>
               </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Image Here</label>
+              <textarea
+                name="image"
+                value={this.state.image}
+                type="text"
+                onChange={e => this.handleChange(e)}
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="1"
+              />
             </div>
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Example textarea</label>

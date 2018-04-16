@@ -32,6 +32,13 @@ class ProfileSettings extends Component {
     });
   };
 
+  onDelete = () => {
+    axios
+      .delete(`/deleteProfile/${this.props.user.userid}`)
+      .then(response => this.props.getUser())
+      .then(response => this.props.history.push("/"));
+  };
+
   onSubmit = () => {
     axios
       .post("/updatingProfile", {
@@ -52,6 +59,11 @@ class ProfileSettings extends Component {
     console.log(this.props);
     return (
       <div>
+        <h5 style={{ marginLeft: "10%", marginRight: "10%", marginTop:"5%" }}>
+          Achieving the health and fitness goals of your dreams starts with a
+          goal. Set your weight and body fat goals and get the tools you need to
+          succeed.
+        </h5>
         <form className="formClass" onSubmit={() => this.handleSubmit()}>
           <div class="nameDiv">
             <label for="exampleFormControlInput1">Name</label>
@@ -176,8 +188,9 @@ class ProfileSettings extends Component {
           </div>
         </form>
         <br />
-        <div className="buttonDiv">
+        <div className="buttonDiv" style={{ display: "inline" }}>
           <button onClick={() => this.onSubmit()}>Submit</button>
+          <button onClick={() => this.onDelete()}> Delete Account </button>
         </div>
       </div>
     );

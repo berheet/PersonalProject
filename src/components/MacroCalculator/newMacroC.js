@@ -48,7 +48,7 @@ class newMacroC extends Component {
                 class="nav-item nav-link"
                 to="/dashboard/MacroCalulator/gainweight"
               >
-                Gain Weight
+                Weight Management
               </Link>
             </div>
           </div>

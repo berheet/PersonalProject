@@ -40,7 +40,7 @@ class Home extends Component {
           }}
         >
           {!this.props.user.age ? (
-            <div className="loginDiv" style={{ marginTop: "5vh" }}>
+            <div className="loginDiv" style={{ marginTop: "10%" }}>
               <h3 style={{ marginBottom: "7vh" }}>Begin your journey today!</h3>{" "}
               <a href={process.env.REACT_APP_LOGIN}>
                 <button

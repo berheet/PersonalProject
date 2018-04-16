@@ -17,7 +17,6 @@ const logout = (req, res) => {
 
 const updateProfile = (req, res) => {
   const dbInstance = req.app.get("db");
-  console.log(req);
   const {
     name,
     age,
@@ -49,10 +48,9 @@ const updateProfile = (req, res) => {
 
 const addTestimonial = (req, res) => {
   const dbInstance = req.app.get("db");
-  console.log(req);
-  const { name, rating, message } = req.body;
+  const { name, rating, message, image } = req.body;
   dbInstance
-    .addTestimonial([name, rating, message])
+    .addTestimonial([name, rating, message, image])
     .then(response => {
       res.status(200).json(response);
     })
@@ -71,10 +69,24 @@ const getTestimonial = (req, res) => {
     });
 };
 
+const deleteProfile = (req, res) => {
+  console.log("Controller:" + req.params.id);
+  const dbInstance = req.app.get("db");
+  dbInstance
+    .deleteProfile([req.params.id])
+    .then(response => {
+      req.session.destroy() && res.status(200).json("Deleted!");
+    })
+    .catch(err => {
+      res.status(500).json(err);
+    });
+};
+
 module.exports = {
   getUser,
   logout,
   updateProfile,
   addTestimonial,
-  getTestimonial
+  getTestimonial,
+  deleteProfile
 };

@@ -27,10 +27,29 @@ class Testimonials extends Component {
       const { testimonials } = this.state;
       mappedTestimonials = testimonials.map(testimonial => {
         return (
-          <div key={testimonial.name + testimonial.message}>
-            <h3>Name: {testimonial.name}</h3>
-            <h4>Rating: {testimonial.rating}</h4>
-            <h4>Message: {testimonial.message}</h4>
+          <div className="testdiv">
+            <div
+              key={testimonial.name + testimonial.message}
+              style={{ textAlign: "center", display: "flex" }}
+            >
+              <img
+                src={testimonial.image}
+                style={{ height: "10%", width: "10%", marginRight:"2%" }}
+              />
+              <h5 style={{ margintop:"1%", marginLeft:"5%" }}>
+                <strong>" </strong>
+                {testimonial.message}
+                <strong>
+                  "
+                  <p>
+                    <br />-{testimonial.name}
+                  </p>
+                </strong>
+              </h5>
+            </div>
+            <div>
+              <p>Rating: {testimonial.rating}/5</p>
+            </div>
           </div>
         );
       });
@@ -38,10 +57,13 @@ class Testimonials extends Component {
 
     return (
       <div>
-        <h1>Testimonials Page </h1>
+        <h1>Here's what our clients are saying! </h1>
         {mappedTestimonials}
         <Link to="/TestimonialSubmission">
-          <button> Submit New Testimonial</button>
+          <button style={{ marginLeft: "40vw", marginBottom: "5vh" }}>
+            {" "}
+            Submit New Testimonial
+          </button>
         </Link>
       </div>
     );

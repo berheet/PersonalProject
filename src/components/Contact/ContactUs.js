@@ -41,7 +41,6 @@ export default class Contact extends Component {
                   type="text"
                   class="form-control"
                   id="exampleFormControlInput1"
-                  placeholder="Name"
                   value={this.state.name}
                   onChange={e => this.handleChange(e)}
                 />
@@ -52,12 +51,11 @@ export default class Contact extends Component {
                   type="email"
                   class="form-control"
                   id="exampleFormControlInput1"
-                  placeholder="name@example.com"
                 />
               </div>
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">
-                  Example textarea
+                  Comments
                 </label>
                 <textarea
                   class="form-control"
@@ -66,7 +64,7 @@ export default class Contact extends Component {
                 />
                 <br />
                 <button
-                  style={{ marginLeft: "10vw", width: "10vw", height: "5vh" }}
+                  style={{ marginLeft: "35%", width: "30%", height: "15%" }}
                   onClick={() => this.onSubmit()}
                 >
                   Send
@@ -74,7 +72,10 @@ export default class Contact extends Component {
               </div>
             </form>
           </div>
-          <div className="contactinfo" style={{ textAlign: "center" }}>
+          <div
+            className="contactinfo"
+            style={{ textAlign: "center", marginTop: "5%", marginLeft:"-10%" }}
+          >
             <div className="contactForm1">
               <h5>
                 <i class="fas fa-globe" />
@@ -89,7 +90,14 @@ export default class Contact extends Component {
               <p>
                 <br />
                 <i class="fas fa-envelope" /> eyobell.berhe@live.longwood.edu
+                <br />
               </p>
+              <div>
+                <img
+                  src="http://www.strategic-business-partners.net/wp-content/uploads/2014/12/services-social-top-icons.png"
+                  style={{ height: "20%", width: "35%" }}
+                />
+              </div>
             </div>{" "}
           </div>
         </div>

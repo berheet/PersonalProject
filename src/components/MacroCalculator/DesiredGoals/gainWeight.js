@@ -89,13 +89,64 @@ class GainWeight extends Component {
         ? BMR_formula_with_activity
         : femal_BMR_formula_with_activity;
 
+    let lose2percent = Math.floor(
+      ((this.props.user.gender === "Male"
+        ? BMR_formula_with_activity - 1000
+        : femal_BMR_formula_with_activity - 1000) /
+        (this.props.user.gender === "Male"
+          ? BMR_formula_with_activity
+          : femal_BMR_formula_with_activity) -
+        1) *
+        100
+    );
+
+    let lose1percent = Math.floor(
+      ((this.props.user.gender === "Male"
+        ? BMR_formula_with_activity - 500
+        : femal_BMR_formula_with_activity - 500) /
+        (this.props.user.gender === "Male"
+          ? BMR_formula_with_activity
+          : femal_BMR_formula_with_activity) -
+        1) *
+        100
+    );
+
+    let gain1percent = Math.floor(
+      ((this.props.user.gender === "Male"
+        ? BMR_formula_with_activity + 500
+        : femal_BMR_formula_with_activity + 500) /
+        (this.props.user.gender === "Male"
+          ? BMR_formula_with_activity
+          : femal_BMR_formula_with_activity) -
+        1) *
+        100
+    );
+
+    let gain2percent = Math.floor(
+      ((this.props.user.gender === "Male"
+        ? BMR_formula_with_activity + 1000
+        : femal_BMR_formula_with_activity + 1000) /
+        (this.props.user.gender === "Male"
+          ? BMR_formula_with_activity
+          : femal_BMR_formula_with_activity) -
+        1) *
+        100
+    );
+
     // let lose2pounds = first / second;
-    console.log(first);
+    console.log(lose2percent);
     return (
       <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav
+          class="navbar navbar-expand-lg"
+          style={{
+            backgroundColor: "#C6CAD3",
+            borderBottom: "groove",
+            marginBottom: "1vh"
+          }}
+        >
           <a class="navbar-brand" href="#">
-            Desired Goal
+            Desired Goals
           </a>
           <button
             class="navbar-toggler"
@@ -114,15 +165,15 @@ class GainWeight extends Component {
                 class="nav-item nav-link"
                 href="/dashboard/MacroCalulator/gainweight"
               >
-                Gain Weight
+                Weight Management
               </a>
             </div>
           </div>
         </nav>
-        <h4 style={{ textAlign: "center" }}>Gain Weight: </h4> <br />
+        <h4 style={{ textAlign: "center" }}>Track your progress: </h4> <br />
         <div className="parentDiv">
           <div className="goalLevel" style={{ marginRight: "3vw" }}>
-            <h5>Percentage Here:</h5>
+            <h5>{lose2percent}%</h5>
             <div class="progress">
               <div
                 class="progress-bar"
@@ -142,7 +193,8 @@ class GainWeight extends Component {
             <p>
               {this.props.user.gender === "Male"
                 ? BMR_formula_with_activity - 1000
-                : femal_BMR_formula_with_activity - 1000}
+                : femal_BMR_formula_with_activity - 1000}{" "}
+              Calories
             </p>
 
             <div id="accordion">
@@ -150,7 +202,7 @@ class GainWeight extends Component {
                 <div class="card-header" id="headingOne">
                   <h5 class="mb-0">
                     <button
-                      style={{ marginLeft: "-2vw" }}
+                      style={{ marginLeft: "-2%" }}
                       class="btn btn-link"
                       data-toggle="collapse"
                       data-target="#collapseOne"
@@ -161,13 +213,13 @@ class GainWeight extends Component {
                     </button>
                   </h5>
                 </div>
-                <div
-                  id="collapseOne"
-                  class="collapse"
-                  aria-labelledby="headingOne"
-                  data-parent="#accordion"
-                >
-                  <div class="card-body">Cool stuff here</div>
+                <div id="collapseOne">
+                  <div class="card-body">
+                    <strong>Tips</strong>
+                    <p> Drink Plenty of Water</p>
+                    <p> Swap Refined Carbs for Veggies</p>
+                    <p> Do atleast 30 minutes of cardio a day</p>
+                  </div>
                 </div>
               </div>{" "}
             </div>
@@ -176,11 +228,11 @@ class GainWeight extends Component {
             className="goalLevel"
             style={
               this.props.user.goal === "Lose Weight: 1 pound per week"
-                ? { backgroundColor: "red" }
+                ? { borderStyle: "solid", borderWidth: "5px", padding: "2px" }
                 : null
             }
           >
-            <h5>Lose 1 Pound per Week:</h5>
+            <h5>{lose1percent}%</h5>
             <div class="progress">
               <div
                 class="progress-bar"
@@ -200,7 +252,8 @@ class GainWeight extends Component {
             <p>
               {this.props.user.gender === "Male"
                 ? BMR_formula_with_activity - 500
-                : femal_BMR_formula_with_activity - 500}
+                : femal_BMR_formula_with_activity - 500}{" "}
+              Calories
             </p>
 
             <div id="accordion">
@@ -210,41 +263,37 @@ class GainWeight extends Component {
                   id="headingTwo"
                   style={
                     this.props.user.goal === "Lose Weight: 1 pound per week"
-                      ? { backgroundColor: "red" }
+                      ? { padding: "2px" }
                       : null
                   }
                 >
                   <h5 class="mb-0">
                     <button
-                      style={{ marginLeft: "-2vw" }}
+                      style={{ marginLeft: "-2%" }}
                       class="btn btn-link"
                       data-toggle="collapse"
                       data-target="#collapseTwo"
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                      Collapsible Group Item #1
+                      Lose 1 Pound per Week
                     </button>
                   </h5>
                 </div>
-                <div
-                  id="collapseTwo"
-                  class="collapse"
-                  aria-labelledby="headingTwo"
-                  data-parent="#accordion"
-                  style={
-                    this.props.user.goal === "Lose Weight: 1 pound per week"
-                      ? { backgroundColor: "red" }
-                      : null
-                  }
-                >
-                  <div class="card-body">Cool stuff here</div>
+                <div id="collapseTwo">
+                  <div class="card-body">
+                    {" "}
+                    <strong>Tips</strong>
+                    <p>Sleep 30 Minutes More a Night</p>
+                    <p>Make One Food Sacrifice</p>
+                    <p>Cutting back on sugar</p>
+                  </div>
                 </div>
               </div>{" "}
             </div>
           </div>
           <div className="goalLevel" style={{ marginLeft: "5vw" }}>
-            <h5>Maintain Current Weight:</h5>
+            <h5>Maintain:</h5>
             <div class="progress">
               <div
                 class="progress-bar"
@@ -264,26 +313,32 @@ class GainWeight extends Component {
             <p>
               {this.props.user.gender === "Male"
                 ? BMR_formula_with_activity
-                : femal_BMR_formula_with_activity}
+                : femal_BMR_formula_with_activity}{" "}
+              Calories
             </p>
 
             <div id="accordion">
               <div class="card">
                 <div class="card-header" id="headingThree">
                   <h5 class="mb-0">
-                    <button style={{ marginLeft: "-2vw" }} class="btn btn-link">
-                      Collapsible Group Item #1
+                    <button style={{ marginLeft: "-2%" }} class="btn btn-link">
+                      Maintain Current Weight:
                     </button>
                   </h5>
                 </div>
 
-                <div class="card-body">Cool stuff here</div>
+                <div class="card-body">
+                  <strong>Tip</strong>
+                  <p>Cardio</p>
+                  <p>Cheat meals in moderation</p>
+                  <p>Drink water!</p>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="goalLevel" style={{ marginLeft: "5vw" }}>
-            <h5>Percentage Here:</h5>
+            <h5>+{gain1percent}%</h5>
             <div class="progress">
               <div
                 class="progress-bar"
@@ -307,7 +362,8 @@ class GainWeight extends Component {
             <p>
               {this.props.user.gender === "Male"
                 ? BMR_formula_with_activity + 500
-                : femal_BMR_formula_with_activity + 500}
+                : femal_BMR_formula_with_activity + 500}{" "}
+              Calories
             </p>
 
             <div id="accordion">
@@ -315,7 +371,7 @@ class GainWeight extends Component {
                 <div class="card-header" id="headingFour">
                   <h5 class="mb-0">
                     <button
-                      style={{ marginLeft: "-2vw" }}
+                      style={{ textAlign: "center" }}
                       class="btn btn-link"
                       data-toggle="collapse"
                       data-target="#collapseFour"
@@ -326,20 +382,21 @@ class GainWeight extends Component {
                     </button>
                   </h5>
                 </div>
-                <div
-                  id="collapseFour"
-                  class="collapse"
-                  aria-labelledby="headingFour"
-                  data-parent="#accordion"
-                >
-                  <div class="card-body">Cool stuff here</div>
+                <div id="collapseFour">
+                  <div class="card-body">
+                    {" "}
+                    <strong>Tips</strong>{" "}
+                    <p>Increase the amount of carbs in your diet</p>
+                    <p> Make sure you have snacks</p>
+                    <p>Drink water!</p>
+                  </div>
                 </div>
               </div>{" "}
             </div>
           </div>
 
           <div className="goalLevel" style={{ marginLeft: "5vw" }}>
-            <h5>Percentage Here:</h5>
+            <h5>+{gain2percent}%</h5>
             <div class="progress">
               <div
                 class="progress-bar"
@@ -363,7 +420,8 @@ class GainWeight extends Component {
             <p>
               {this.props.user.gender === "Male"
                 ? BMR_formula_with_activity + 1000
-                : femal_BMR_formula_with_activity + 1000}
+                : femal_BMR_formula_with_activity + 1000}{" "}
+              Calories
             </p>
 
             <div id="accordion">
@@ -371,7 +429,7 @@ class GainWeight extends Component {
                 <div class="card-header" id="headingfive">
                   <h5 class="mb-0">
                     <button
-                      style={{ marginLeft: "-2vw" }}
+                      style={{ textAlign: "center" }}
                       class="btn btn-link"
                       data-toggle="collapse"
                       data-target="#collapseFive"
@@ -382,13 +440,12 @@ class GainWeight extends Component {
                     </button>
                   </h5>
                 </div>
-                <div
-                  id="collapseFive"
-                  class="collapse"
-                  aria-labelledby="headingFive"
-                  data-parent="#accordion"
-                >
-                  <div class="card-body">Cool stuff here</div>
+                <div id="collapseFive">
+                  <div class="card-body">
+                    <strong>Tips</strong> <p>Eat more carbs</p>
+                    <p> Don't miss a meal</p>
+                    <p>Continue to drink water!</p>
+                  </div>
                 </div>{" "}
               </div>
             </div>

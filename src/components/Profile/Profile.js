@@ -15,13 +15,26 @@ class Profile extends Component {
     console.log(this.props);
     return (
       <div>
-        <div className="container">
+        <div>
           <h1> Profile </h1>
-          <h4>Name: {this.props.user.name}</h4>
-          <h4>Age: {this.props.user.age}</h4>
-          <h4>Current Weight: {this.props.user.currentweight}</h4>
-          <h4>Goal Weight: {this.props.user.goalweight}</h4>
-          <h4>{this.props.user.goal}</h4>
+        </div>
+        <div className="container" style={{ display: "flex" }}>
+          <div style={{ display: "flex" }} />
+          <div style={{ marginLeft: "2vw" }}>
+            <p>
+              <h5>{this.props.user.name} </h5>
+            </p>
+            <p>
+              <h5> {this.props.user.age}</h5>
+            </p>
+
+            <p>
+              <h5>Current Weight: {this.props.user.currentweight}</h5>{" "}
+            </p>
+            <p>
+              <h5>Goal Weight: {this.props.user.goalweight}</h5>
+            </p>
+          </div>
         </div>
       </div>
     );

@@ -13,7 +13,8 @@ const {
   logout,
   updateProfile,
   addTestimonial,
-  getTestimonial
+  getTestimonial,
+  deleteProfile
 } = require(`${__dirname}/Controllers/usersCtrl`);
 
 massive(process.env.CONNECTION_STRING)
@@ -127,7 +128,8 @@ app.get("/logout", logout);
 app.get("/api/me", getUser);
 app.post("/updatingProfile", updateProfile);
 app.post("/addingTestimonial", addTestimonial);
-app.get("/api/testimonial", getTestimonial)
+app.get("/api/testimonial", getTestimonial);
+app.delete("/deleteProfile/:id", deleteProfile);
 
 const path = require("path");
 app.get("*", (req, res, next) => {

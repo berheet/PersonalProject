@@ -7,7 +7,11 @@ class Articles extends Component {
         <h1>Articles</h1>
         <div
           className="articlesDiv"
-          style={{ display: "block", marginLeft: "5vw" }}
+          style={{
+            display: "block",
+            marginLeft: "5vw",
+            zIndex: "-2"
+          }}
         >
           <a href="/FlexibleDieting">
             <div
@@ -253,34 +257,34 @@ class Articles extends Component {
               </div>
             </div>
           </a>
-          <a href="/SixPackNutrition" >
-          <div
-            className="black dib br3 pa3 ma2 grow bw2 shadow-5"
-            style={{
-              width: "90%",
-              display: "inline-flex",
-              backgroundColor: "#F4F4F4"
-            }}
-          >
-            <img
-              style={{ width: "15vw", height: "15vh" }}
-              src="https://www.bodybuilding.com/images/2017/june/how-six-pack-nutrition-is-a-different-beast-than-fitness-nutrition-header-v2-CELLUCOR-400x225.jpg"
-              alt="team logo"
-            />
-            <div style={{ marginLeft: "5vw", textAlign: "center" }}>
-              <h4>
-                <strong>
-                  How Six-Pack Nutrition Is A Different Beast Than Fitness
-                  Nutrition
-                </strong>
-              </h4>
-              <p>
-                Yes, you can live the fit life and have room for serious
-                indulgence. But when shredded six-pack abs are in your sight,
-                the game changes. Here's the approach you need.
-              </p>
+          <a href="/SixPackNutrition">
+            <div
+              className="black dib br3 pa3 ma2 grow bw2 shadow-5"
+              style={{
+                width: "90%",
+                display: "inline-flex",
+                backgroundColor: "#F4F4F4"
+              }}
+            >
+              <img
+                style={{ width: "15vw", height: "15vh" }}
+                src="https://www.bodybuilding.com/images/2017/june/how-six-pack-nutrition-is-a-different-beast-than-fitness-nutrition-header-v2-CELLUCOR-400x225.jpg"
+                alt="team logo"
+              />
+              <div style={{ marginLeft: "5vw", textAlign: "center" }}>
+                <h4>
+                  <strong>
+                    How Six-Pack Nutrition Is A Different Beast Than Fitness
+                    Nutrition
+                  </strong>
+                </h4>
+                <p>
+                  Yes, you can live the fit life and have room for serious
+                  indulgence. But when shredded six-pack abs are in your sight,
+                  the game changes. Here's the approach you need.
+                </p>
+              </div>
             </div>
-          </div>
           </a>
         </div>
       </div>

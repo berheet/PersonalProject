@@ -9,15 +9,15 @@ import { withRouter } from "react-router";
 
 const SecondHeader = () => {
   return (
-    <div className="headerDiv" style={{ height: "20vh", margin:"0" }}>
+    <div className="headerDiv" style={{ height: "20vh", margin: "0" }}>
       <div className="logoDiv">
         <img
-          src="https://files.slack.com/files-pri/T039C2PUY-FA6FL3J1G/e-volving1__2_.png"
+          src="https://files.slack.com/files-pri/T039C2PUY-FA73C1DMF/e-volving1.png"
           style={{
             height: "30vh",
             width: "18vw",
             marginLeft: "1vw",
-            zIndex: "2"
+            zIndex: "-2"
           }}
         />
       </div>
@@ -28,6 +28,8 @@ const SecondHeader = () => {
           height: "6vh",
           width: "100vw",
           position: "absolute",
+          position: "fixed",
+          zIndex: "1000"
         }}
       >
         <div className="headerBtns">
@@ -70,7 +72,7 @@ const SecondHeader = () => {
                 Articles
               </Link>
               <Link class="dropdown-item" to="/Top50">
-                Top 50 Supplements
+                Top 0 Supplements
               </Link>
             </div>
           </div>

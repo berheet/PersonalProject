@@ -16,7 +16,10 @@ const newHeader = () => {
           style={{ height: "30vh", width: "18vw", marginLeft: "1vw" }}
         />
       </div>
-      <div className="buttonsDiv" style={{ marginLeft: "30vw" }}>
+      <div
+        className="buttonsDiv"
+        style={{ marginLeft: "55vw", position: "fixed" }}
+      >
         <div className="headerBtns">
           <div class="btn-group">
             <Link to="/">
@@ -49,14 +52,14 @@ const newHeader = () => {
               <strong> Nutrition</strong>
             </button>
             <div class="dropdown-menu">
-              <Link class="dropdown-item" to="/Recipies">
+              <Link class="dropdown-item" to="/BreakfastRecipies">
                 Recipies
               </Link>
               <Link class="dropdown-item" to="/Articles">
                 Articles
               </Link>
               <Link class="dropdown-item" to="/Top50">
-                Top 50 Supplements
+                Top 10 Supplements
               </Link>
             </div>
           </div>
