@@ -81,7 +81,7 @@ class TestimonialSubmission extends Component {
               />
             </div>
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Example textarea</label>
+              <label for="exampleFormControlTextarea1">Comment</label>
               <textarea
                 name="message"
                 value={this.state.message}
