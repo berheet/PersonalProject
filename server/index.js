@@ -94,8 +94,8 @@ passport.deserializeUser((user, done) => {
 
 app.get("/auth", passport.authenticate("auth0"), function(req, res, next) {
   req.user.height === null
-    ? res.redirect("http://localhost:3000/dashboard/profileSettings")
-    : res.redirect("http://localhost:3000/profile");
+    ? res.redirect("/dashboard/profileSettings")
+    : res.redirect("/profile");
 });
 
 // app.get('/api/me', (req, res, next) => {

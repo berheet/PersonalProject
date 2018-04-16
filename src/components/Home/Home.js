@@ -17,7 +17,7 @@ class Home extends Component {
     };
   }
   handleLogin() {
-    window.location.href = "http://localhost:3001/auth";
+    window.location.href = "/auth";
   }
 
   render() {
